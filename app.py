@@ -14,7 +14,7 @@ st.title("🚆 Smart Railway Resource Planning System")
 @st.cache_data
 def load_data():
     df = pd.read_csv(
-        "C:\\Users\\tranu\\Desktop\\SMART RAILWAY RESOURCE PLANNING\\data\\railway_dataset.csv"
+        "railway_dataset.csv"
     )
     return df
 
@@ -81,7 +81,7 @@ st.header("Predict Passenger Demand")
 
 try:
     model = joblib.load(
-        "C:\\Users\\tranu\\Desktop\\SMART RAILWAY RESOURCE PLANNING\\railway_demand_model.pkl"
+        "railway_demand_model.pkl"
     )
 except:
     model = None
@@ -151,3 +151,4 @@ st.plotly_chart(fig3, use_container_width=True)
 st.header("Dataset Preview")
 
 st.dataframe(df.head(20))
+
